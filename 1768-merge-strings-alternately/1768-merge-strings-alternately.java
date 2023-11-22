@@ -1,21 +1,16 @@
 class Solution {
     public String mergeAlternately(String word1, String word2) {
-        String answer = "";
-        if (word1.length() > word2.length()) {
-            for (int i = 0; i < word1.length(); i++) {
-                answer += word1.charAt(i);
-                if (i < word2.length()) {
-                    answer += word2.charAt(i);
-                }
+        // String에서 StringBuilder로 변경하고 실행시간 6ms 감소
+        StringBuilder answer = new StringBuilder();
+        int i = 0, j = 0;
+        while (i < word1.length() || j < word2.length()) {
+            if (i < word1.length()) {
+                answer.append(word1.charAt(i++));
             }
-        } else {
-            for (int i = 0; i < word2.length(); i++) {
-                if (i < word1.length()) {
-                    answer += word1.charAt(i);
-                }
-                answer += word2.charAt(i);
+            if (j < word2.length()) {
+                answer.append(word2.charAt(j++));
             }
         }
-        return answer;
+        return answer.toString();
     }
 }
