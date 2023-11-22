@@ -16,9 +16,8 @@ class Solution {
                 break;
             }
 
-            if (symbols.get(s.charAt(i)) < symbols.get(s.charAt(i + 1))) { // 작은 수가 먼저 오는 경우
-                sum = sum + symbols.get(s.charAt(i + 1)) - symbols.get(s.charAt(i));
-                i++;
+            if (symbols.get(s.charAt(i)) < symbols.get(s.charAt(i + 1))) {
+                sum -= symbols.get(s.charAt(i));
             }
             else {
                 sum += symbols.get(s.charAt(i));
