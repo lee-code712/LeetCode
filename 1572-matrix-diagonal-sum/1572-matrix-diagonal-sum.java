@@ -11,7 +11,7 @@ class Solution {
             sum += mat[i][x++] + mat[i][y--];
         }
         if (mat.length % 2 != 0) {
-            sum -= mat[mat.length/2][mat.length/2];
+            sum -= mat[x/2][x/2];
         }
         
         return sum;
