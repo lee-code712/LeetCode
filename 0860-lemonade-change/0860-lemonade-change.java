@@ -4,13 +4,15 @@ class Solution {
         for (int bill : bills) {
             if (bill == 5) {
                 changes[0]++;
+                continue;
             }
-            else if (bill == 10) {
+            if (bill == 10) {
                 if (changes[0] < 1) return false;
                 changes[1]++;
                 changes[0]--;
+                continue;
             }
-            else if (bill == 20) {
+            if (bill == 20) {
                 if (changes[0] < 1 || changes[1] < 1) { 
                     if (changes[0] < 3) return false;
                 }
