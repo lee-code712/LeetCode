@@ -3,7 +3,6 @@ class Solution {
         int result = 0;
         int sign = 1;
         int i = 0;
-        char c;
 
         while(i < s.length() && s.charAt(i) == ' ') {
             i++;
